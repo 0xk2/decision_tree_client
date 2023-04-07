@@ -89,7 +89,7 @@ const VoteForm : FC<AccountProps> = (account?) => {
       <Form className="mb-5">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Workflow Id</Form.Label>
-          <Form.Control type="text" placeholder="Some mission id, e.g: RSuWDeGDCVqrazht" 
+          <Form.Control type="text" placeholder="Please use the WorkFlow Id provided after submitting form in tab 1&2, e.g: RSuWDeGDCVqrazht" 
             value={inputMissionId} onChange={handleMissionIdChange} />
         </Form.Group>
         <Button onClick={handleSubmit}>Load Mission</Button>

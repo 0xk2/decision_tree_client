@@ -103,6 +103,17 @@ const CreateGrantForm : FC = () => {
 
   return (
     <div>
+      <Row>
+        <Col sm={12} md={7} lg={7}>
+          <img src="./images/public_fund.png" alt="A sample public fund process" width="100%" />
+        </Col>
+        <Col sm={12} md={5} lg={5}  className="pt-3" >
+          <p><h2>Why public funding need DASH?</h2></p>
+          <p>Most public fund need a grant application process and a voting process demand transparency and fairness.</p>
+          <p>This is a sample of a public fund process, of which community member can use web3 or web2 identity to vote or their voting power can be represented by some token.</p>
+        </Col>
+      </Row>
+      
       <h1>Let's submit a Grant Application</h1>
       <Row className="mb-3">
         <Col sm={12} md={12} lg={12} >
@@ -131,7 +142,7 @@ const CreateGrantForm : FC = () => {
         <div>
           <h4>We will build a 3 round voting with Community -&gt; Council team -&gt; Tech advisor team.</h4>
         </div>
-        <div>Note: To win a round, you need at least 3 "Yes".</div>
+        <div>Note: To win a round, you need at least 3 "Yes". After submit, take the <b>Workflow Id</b> and go to Vote tab to see how vote works.</div>
         </Col>
       </Row>
       <Row className="mb-3">

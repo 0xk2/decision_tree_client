@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import { Button, Form, Alert } from "react-bootstrap";
+import { Button, Form, Alert, Row, Col } from "react-bootstrap";
 import axios from "axios";
 
 const createRecruitDecision = (candidates:RecruitItem[]):object => {
@@ -87,6 +87,16 @@ const CreateRecruitDecisionForm : FC = () => {
 
   return (
     <div>
+      <Row>
+        <Col sm={12} md={7} lg={7}>
+          <img src="./images/hiring.png" alt="A sample public fund process" width="100%" />
+        </Col>
+        <Col sm={12} md={5} lg={5}  className="pt-3" >
+          <p><h2>Why HIRING need DASH?</h2></p>
+          <p>Business processes such as Hiring is a collective decision making process. Using DASH, the decision structure would be clearly represented, easy to iterate and improve.</p>
+          <p>Moreover, sine all business process can be represented as a Directed Graph, it is possible to do data analytics on cross-business processes with minimum cost of data processing.</p>
+        </Col>
+      </Row>
       <div>
         <Form.Label>
           <h3>Create Recruit Info &nbsp;
@@ -130,7 +140,7 @@ const CreateRecruitDecisionForm : FC = () => {
         <div>
           <h4>We will build a 2 round voting to select the 1 candidate from {items.length} candidates</h4>
         </div>
-        <div>Note: we need at least 4 candidates to start this process. Whoever win 3 votes will be selected.</div>
+        <div>Note: we need at least 4 candidates to start this process. Whoever win 3 votes will be selected. After submit, take the Workflow Id and go to Vote tab to see how vote works.</div>
       </div>
       <div className="mt-3 mb-3">
         {items.length >= 4 ? <Button onClick={handleSubmit}>Submit</Button> : null}
