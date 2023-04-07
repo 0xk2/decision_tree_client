@@ -4,8 +4,6 @@ import { Alert, Button, Col, Container, Form, Row } from "react-bootstrap";
 import VoteMachineForm from "./votemachine/VoteMachineForm";
 import VoteMachineVoteResult from "./votemachine/VoteMachineVoteResult";
 
-const SERVER_URL = "http://localhost:8080"
-
 type AccountProps = {
   provider: string,
   identity?: string
@@ -51,7 +49,7 @@ const VoteForm : FC<AccountProps> = (account?) => {
   }
 
   const loadMissionDetail = (mission_id:string) => {
-    axios.get(SERVER_URL+"/show?id=" + mission_id).then((res) => {
+    axios.get(process.env.REACT_APP_SERVER_BASE+"/show?id=" + mission_id).then((res) => {
       setMission(res.data)   
     }).catch((e) => {
       alert(e.message)
@@ -65,7 +63,7 @@ const VoteForm : FC<AccountProps> = (account?) => {
       who: account?.provider+"."+account?.identity,
       options: choices
     }
-    axios.post(SERVER_URL+"/vote", body).then((res) => {
+    axios.post(process.env.REACT_APP_SERVER_BASE+"/vote", body).then((res) => {
       const resp = res.data
       loadMissionDetail(mission.mission_id)
       if (resp.status === true){

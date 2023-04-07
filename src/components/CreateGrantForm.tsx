@@ -94,7 +94,7 @@ const CreateGrantForm : FC = () => {
     }
     e.preventDefault()
     const grantApplication = createGrantApplication(title, description)
-    axios.post("http://localhost:8080/create", grantApplication).then((res) => {
+    axios.post(process.env.REACT_APP_SERVER_BASE+"/create", grantApplication).then((res) => {
       setLatestMissionId(res.data.id)
     }).catch((e) => {
       alert(e.message)

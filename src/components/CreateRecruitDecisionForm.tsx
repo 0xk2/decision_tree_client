@@ -77,7 +77,7 @@ const CreateRecruitDecisionForm : FC = () => {
   const handleSubmit = (e: React.MouseEvent) => {
     e.preventDefault()
     const grantApplication = createRecruitDecision(items)
-    axios.post("http://localhost:8080/create", grantApplication).then((res) => {
+    axios.post(process.env.REACT_APP_SERVER_BASE+"/create", grantApplication).then((res) => {
       setItems([])
       setLatestMissionId(res.data.id)
     }).catch((e) => {
