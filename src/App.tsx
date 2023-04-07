@@ -8,7 +8,7 @@ import CreateRecruitDecisionForm from './components/CreateRecruitDecisionForm';
 import GoogleProvider from './provider/google/GoogleProvider';
 
 function App() {
-  const [key, setKey] = useState("new-grant");
+  const [key, setKey] = useState("intro");
 
   return (
     <div className="App">
@@ -20,10 +20,9 @@ function App() {
         } className="mb-3" activeKey={key}>
           <Tab eventKey="intro" title="0. Intro">
             <h2>Intro to the DASH</h2>
-            <p>Making decision together is an important activity for human being, but for thousands of years decisions are made behind closed door, lack data to make changes and it almost always costly to change any decision making process.</p>
+            <p>Making decision together is an important activity for human being, but for thousands of years decisions are made behind closed door, lack data to make changes and it is almost always too costly to change any decision making process.</p>
             <p>DASH is a collection of on-chain program on Solana help anyone to build their community's decision making process on blockchain.
-            DASH would make group decision making process <b>transparent</b>, <b>automated</b> with both web2 & web3 actions and easier to <b>iterate and improve</b></p>
-            <p>DASH provide following functions:</p>
+            DASH would make group decision making process <b>transparent</b>, <b>automated</b> with both web2 & web3 actions and easier to <b>iterate and improve</b>. DASH provides following functions:</p>
             <ol>
               <li>Creator can build a Directed Graph with each Node has a Proposal with its own set of rule for voting and condition for moving to the next Node</li>
               <li>All data will be stored securely on Solana blockchain</li>

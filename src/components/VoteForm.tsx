@@ -92,7 +92,7 @@ const VoteForm : FC<AccountProps> = (account?) => {
           <Form.Control type="text" placeholder="Please use the WorkFlow Id provided after submitting form in tab 1&2, e.g: RSuWDeGDCVqrazht" 
             value={inputMissionId} onChange={handleMissionIdChange} />
         </Form.Group>
-        <Button onClick={handleSubmit}>Load Mission</Button>
+        <Button onClick={handleSubmit}>Load Workflow</Button>
       </Form>
       <Row>
         <Col sm={12} lg={6} >
