@@ -1,4 +1,4 @@
-import { GoogleLogin, GoogleOAuthProvider, TokenResponse, googleLogout, useGoogleLogin } from "@react-oauth/google"
+import { GoogleOAuthProvider, TokenResponse, googleLogout, useGoogleLogin } from "@react-oauth/google"
 import VoteForm from "../../components/VoteForm";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -16,7 +16,7 @@ const GoogleProvider : React.FC<Props> = ({children}) => {
   )
 }
 
-type Profile = {
+type UserProfile = {
   email: string,
   name: string,
   picture: string,
@@ -24,7 +24,7 @@ type Profile = {
 
 const Profile: React.FC = () => {
   const [ accessToken, setAccessToken ] = useState("");
-  const [ profile, setProfile ] = useState({} as Profile);
+  const [ profile, setProfile ] = useState({} as UserProfile);
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse: TokenResponse) => {
@@ -56,9 +56,8 @@ const Profile: React.FC = () => {
   // log out function to log the user out of google and set the profile array to null
   const logOut = () => {
     googleLogout();
-    setProfile({} as Profile);
+    setProfile({} as UserProfile);
   };
-  console.log("email: ",profile.email)
   return (
     <div>
       {profile.email !== undefined ? (
