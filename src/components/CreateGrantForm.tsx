@@ -108,7 +108,7 @@ const CreateGrantForm : FC = () => {
           <img src="./images/public_fund.png" alt="A sample public fund process" width="100%" />
         </Col>
         <Col sm={12} md={5} lg={5}  className="pt-3" >
-          <p><h2>Why public funding need DASH?</h2></p>
+          <h2>Why public funding need DASH?</h2>
           <p>Most public fund need a grant application process and a voting process demand transparency and fairness.</p>
           <p>This is a sample of a public fund process, of which community member can use web3 or web2 identity to vote or their voting power can be represented by some token.</p>
         </Col>

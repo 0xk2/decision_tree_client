@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Container, Tabs, Tab } from 'react-bootstrap';
 import './App.css';
-import EthProvider from './wallets/ethereum/EthProvider';
-import SolProvider from './wallets/solana/SolProvider';
+import EthProvider from './provider/ethereum/EthProvider';
+import SolProvider from './provider/solana/SolProvider';
 import CreateGrantForm from './components/CreateGrantForm';
 import CreateRecruitDecisionForm from './components/CreateRecruitDecisionForm';
+import GoogleProvider from './provider/google/GoogleProvider';
 
 function App() {
   const [key, setKey] = useState("new-grant");
@@ -42,6 +43,10 @@ function App() {
             <EthProvider onAccountChange={(params:any) => {
             }}>
             </EthProvider>
+          </Tab>
+          <Tab eventKey="Google-voter" title="5. Vote with Google Account">
+            <p>You can vote using your Google account.</p>
+            <GoogleProvider></GoogleProvider>
           </Tab>
         </Tabs>
       </Container>

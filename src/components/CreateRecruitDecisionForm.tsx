@@ -92,7 +92,7 @@ const CreateRecruitDecisionForm : FC = () => {
           <img src="./images/hiring.png" alt="A sample public fund process" width="100%" />
         </Col>
         <Col sm={12} md={5} lg={5}  className="pt-3" >
-          <p><h2>Why HIRING need DASH?</h2></p>
+          <h2>Why HIRING need DASH?</h2>
           <p>Business processes such as Hiring is a collective decision making process. Using DASH, the decision structure would be clearly represented, easy to iterate and improve.</p>
           <p>Moreover, sine all business process can be represented as a Directed Graph, it is possible to do data analytics on cross-business processes with minimum cost of data processing.</p>
         </Col>
