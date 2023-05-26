@@ -92,21 +92,34 @@ const CreateRecruitDecisionForm : FC = () => {
           <img src="./images/hiring.png" alt="A sample public fund process" width="100%" />
         </Col>
         <Col sm={12} md={5} lg={5}  className="pt-3" >
-          <h2>Why HIRING need DASH?</h2>
-          <p>Business processes such as Hiring is a collective decision making process. Using DASH, the decision structure would be clearly represented, easy to iterate and improve.</p>
-          <p>Moreover, sine all business process can be represented as a Directed Graph, it is possible to do data analytics on cross-business processes with minimum cost of data processing.</p>
+          <h2>Demo explain</h2>
+          <p>This demo simulate a selection process similar to that of a recruitment process where from a pool of candidates, the organisation narrow the options down to one eventual winner.</p>
+          <p>The picture on the left hand side shows the steps (2 steps) for a candidate to go through and who is responsible to vote in each steps.</p>
+          <p>In this demo, the steps is pre-defined (workflow). In the working version, users will be able to create their own workflow.</p>
+          <p>This Demo shows:</p>
+          <ul>
+            <li>Once a consensus is reached at each step, the mission automatically move to the next steps.</li>
+            <li>Web3 wallets and Web2 emails can both be use to vote on a misison.</li>
+          </ul>
         </Col>
       </Row>
       <div>
         <Form.Label>
-          <h3>Create Recruit Info &nbsp;
+          <h3>Start the Demo &nbsp;
           <Button variant="outline-primary" onClick={() => {
             setItems(defaultRecruitItems)
             setTitle("")
             setDescription("")
           }}>Restart demo data</Button>
           </h3>
-          
+          <p>The Demo start by submitting a new application into the workflow (we call this: start a new mission).</p>
+          <p>To start:</p>
+          <ul>
+            <li>Enter the Title and the Description to Add new candidate. We already created 6 candidates for you so you don’t need to do this steps if you don’t want to. However, depends on how many candidate in total at the beginning it will affect the number of winners in the 1st voting steps as it is define as 50% of all starting options.</li>
+            <li>Click Submit when you done.</li>
+            <li>A Mission ID is generated: copy this ID.</li>
+            <li>Now go to tab 3, 4 or 5 depends on which type of authentication you want to use. (you can use all 3 to simulate different people voting)</li>
+          </ul>
         </Form.Label>
         <Form.Group className="mt-2">
           <Form.Label>Title</Form.Label>

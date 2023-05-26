@@ -108,13 +108,25 @@ const CreateGrantForm : FC = () => {
           <img src="./images/public_fund.png" alt="A sample public fund process" width="100%" />
         </Col>
         <Col sm={12} md={5} lg={5}  className="pt-3" >
-          <h2>Why public funding need DASH?</h2>
-          <p>Most public fund need a grant application process and a voting process demand transparency and fairness.</p>
-          <p>This is a sample of a public fund process, of which community member can use web3 or web2 identity to vote or their voting power can be represented by some token.</p>
+          <h2>Demo explain</h2>
+          <p>This demo simulate a selection process similar to that of Grant or Investment process from a Foundation or an Investment DAO.</p>
+          <p>The picture on the left hand side shows the steps (3 steps) for an application to go through and who’s responsible to vote in each steps.</p>
+          <p>In this demo, the steps is pre-defined (workflow). In the working version, users will be able to create their own workflow.</p>
+          <h3>This Demo shows:</h3>
+          <ul>
+            <li>Once a consensus is reached at each step, the mission automatically move to the next steps.</li>
+            <li>Web3 wallets and Web2 emails can both be use to vote on a misison.</li>
+          </ul>
         </Col>
       </Row>
       
-      <h1>Let's submit a Grant Application</h1>
+      <h1>Start the Demo</h1>
+      <p>The Demo start by submitting a new application into the workflow (we call this: start a new mission).</p>
+      <p>To start, enter the Title and the Description and click Submit.</p>
+      <ul>
+        <li>A Mission ID is generated: copy this ID.</li>
+        <li>Now go to tab 3, 4 or 5 depends on which type of authentication you want to use. (you can use all 3 to simulate different people voting)</li>
+      </ul>
       <Row className="mb-3">
         <Col sm={12} md={12} lg={12} >
           <Form.Group className="mt-1">

@@ -7,6 +7,21 @@ import CreateGrantForm from './components/CreateGrantForm';
 import CreateRecruitDecisionForm from './components/CreateRecruitDecisionForm';
 import GoogleProvider from './provider/google/GoogleProvider';
 
+const VoteIntro = () => {
+  return (
+    <div>
+      <p style={{fontWeight:"700"}}>To start voting:</p>
+      <ul>
+        <li>Connect your wallet or Email</li>
+        <li>Paste the Mission ID you have and hit Load Mission</li>
+        <li>On the left side of the screen you will see the option you can choose to vote with. On the right side is the information of the mission you created, once you cast a vote it will also show how many people has vote in the options.</li>
+        <li>Cast your vote, in this demo, we don not limit the amount of time an user can vote. A winning option will need at least 3 vote, so you will need to cast multiple vote for the workflow to proceed.</li>
+        <li>To fully understand the demo, you should at least use 2 out of 3 Voting tab (tab 3, 4, 5) so that you can visually see different users from different chains and across web 2 and 3 can vote on a same mission.</li>
+      </ul>
+    </div>
+  )
+}
+
 function App() {
   const [key, setKey] = useState("intro");
 
@@ -20,6 +35,7 @@ function App() {
         } className="mb-3" activeKey={key}>
           <Tab eventKey="intro" title="0. Intro">
             <h2>Intro to the DASH</h2>
+            <h3>TLDR; Please  go to either tab 1 or tab 2 to start the Demo.</h3>
             <p>Making decision together is an important activity for human being, but for thousands of years decisions are made behind closed door, lack data to make changes and it is almost always too costly to change any decision making process.</p>
             <p>DASH is a collection of on-chain program on Solana help anyone to build their community's decision making process on blockchain.
             DASH would make group decision making process <b>transparent</b>, <b>automated</b> with both web2 & web3 actions and easier to <b>iterate and improve</b>. DASH provides following functions:</p>
@@ -41,19 +57,22 @@ function App() {
             <CreateRecruitDecisionForm />
           </Tab>
           <Tab eventKey="solana-voter" title="3. Vote with SOL">
-            <p>You can vote using your Solana private key. In the future we would support token & NFT voting</p>
+            <p>TLDR; You can vote using your Solana private key. In the future we would support token & NFT voting</p>
+            <VoteIntro />
             <SolProvider onAccountChange={(params:any) => {
             }}>
             </SolProvider>
           </Tab>
           <Tab eventKey="ethereum-voter" title="4. Vote with ETH">
-            <p>You can vote using your EVM-compatible private key. In the future we would support token & NFT voting</p>
+            <p>TLDR; You can vote using your EVM-compatible private key. In the future we would support token & NFT voting</p>
+            <VoteIntro />
             <EthProvider onAccountChange={(params:any) => {
             }}>
             </EthProvider>
           </Tab>
           <Tab eventKey="Google-voter" title="5. Vote with Google Account">
-            <p>You can vote using your Google account.</p>
+            <p>TLDR; You can vote using your Google account.</p>
+            <VoteIntro />
             <GoogleProvider></GoogleProvider>
           </Tab>
         </Tabs>
